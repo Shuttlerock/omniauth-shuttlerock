@@ -10,7 +10,7 @@ module OmniAuth
         site:              'http://gatekeeper.dev',
         request_token_url: '/oauth/request_token',
         authorize_url:     '/oauth/authorize',
-        token_url:         '/oauth/access_token',
+        token_url:         '/oauth/token',
       }
 
       uid { raw_info['uid'] }
