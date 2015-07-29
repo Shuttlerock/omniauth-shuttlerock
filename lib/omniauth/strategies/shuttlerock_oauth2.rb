@@ -7,7 +7,7 @@ module OmniAuth
       option :name, 'shuttlerock_oauth2'
 
       option :client_options, {
-        site:              'http://gatekeeper.dev',
+        site:              ENV['SHUTTLEROCK_OAUTH2_SITE'] || 'https://login.shuttlerock.com',
         request_token_url: '/oauth/request_token',
         authorize_url:     '/oauth/authorize',
         token_url:         '/oauth/token',
@@ -17,7 +17,7 @@ module OmniAuth
 
       info do
         {
-          role: raw_info['role'],
+          roles: raw_info['roles'],
         }
       end
 

@@ -11,7 +11,7 @@ describe OmniAuth::Strategies::ShuttlerockOauth2 do
     end
 
     it 'should have correct site' do
-      subject.options.client_options.site.should eq('http://gatekeeper.dev')
+      subject.options.client_options.site.should eq('https://login.shuttlerock.com')
     end
 
     it 'should have correct authorize url' do
