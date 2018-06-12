@@ -7,15 +7,15 @@ describe OmniAuth::Strategies::ShuttlerockOauth2 do
 
   context "client options" do
     it 'should have correct name' do
-      subject.options.name.should eq('shuttlerock_oauth2')
+      expect(subject.options.name).to eq('shuttlerock_oauth2')
     end
 
     it 'should have correct site' do
-      subject.options.client_options.site.should eq('https://login.shuttlerock.com')
+      expect(subject.options.client_options.site).to eq('https://login.shuttlerock.com')
     end
 
     it 'should have correct authorize url' do
-      subject.options.client_options.authorize_url.should eq('/oauth/authorize')
+      expect(subject.options.client_options.authorize_url).to eq('/oauth/authorize')
     end
   end
 end
